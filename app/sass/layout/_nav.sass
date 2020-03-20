@@ -1,0 +1,96 @@
+.nav
+  position: relative
+  z-index: 100 
+  margin-bottom: 15px
+
+
+.nav__list-wrap 
+  padding-right: 160px
+  background-color: #7b7b7b
+  border-bottom: 4px solid #333
+  box-shadow: inset 0 -5px 5px -5px #000
+  +media-lg 
+    padding-right: 0
+  +media-sm 
+    display: none
+
+.nav__list 
+  display: flex
+  align-items: center
+  justify-content: space-between
+  max-width: 870px
+  height: 48px
+  list-style: none
+  margin: 0 auto
+  padding: 0 10px
+  +media-md 
+    width: 738px
+
+.nav__item 
+  position: relative
+
+.nav__link 
+  position: relative
+  bottom: 5px
+  display: block
+  padding: 20px 18px 10px
+  width: 100%
+  font-size: 16px 
+  color: #fff
+  white-space: nowrap
+  +media-lg 
+    font-size: 15px
+    padding: 20px 20px 10px
+  +media-md 
+    padding: 20px 10px 10px
+    
+.nav__link:hover,
+.nav__link.active  
+  background-color: #ffb953
+
+// --------------------------Submenu---------------------------
+
+.nav__list-sub 
+  display: none
+  position: absolute
+  top: 75px
+  list-style: none
+  padding: 0
+  margin: 0
+  border-top: 5px solid #ffb953
+  background-color: #7b7b7b 
+  &::before 
+    content: ''
+    position: absolute
+    top: -29px
+    left: 0
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 0 35px 24px 35px
+    border-color: transparent transparent #ffb953 transparent
+  &.active 
+    display: block
+
+.nav__item-sub 
+  position: relative
+  width: 220px
+  border-bottom: 1px solid #fff
+
+.nav__link-sub 
+  display: block
+  padding: 11px 12px
+  padding-right: 20px
+  font-size: 14px 
+  color: #fff
+
+.nav__link-sub:hover,
+.nav__link-sub.active 
+  background-color: #ffb953
+  
+.nav__list-sub li>.nav__list-sub 
+  left: 100%
+  top: 20px
+
+
+
