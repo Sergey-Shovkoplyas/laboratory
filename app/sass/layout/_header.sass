@@ -1,5 +1,11 @@
 .header 
   padding: 10px 0
+  // +media-sm 
+  //   position: fixed
+  //   top: 0
+  //   left: 0
+  //   width: 100%
+  //   background-color: #fff
 
 .header__row 
   display: flex
@@ -49,13 +55,31 @@
 
 .header__btn-menu 
   display: none
+  justify-content: center
+  align-items: center
   width: 54px 
   height: 54px
   border: 1px solid #cccccc
   background-color: #fff
   cursor: pointer
   +media-sm
-    display: block
+    display: flex
   +media-xs 
     width: 35px
     height: 35px
+
+.header__phone 
+  display: none
+  margin-left: 60px
+  font-size: 14px
+  font-weight: 700 
+  color:#707070
+  +media-xs
+    display: block
+
+.header__phone-icon
+  display: inline-block
+  vertical-align: middle
+  margin-right: 5px
+  padding-bottom: 3px
+  width: 12px

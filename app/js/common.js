@@ -25,9 +25,7 @@ $( document ).ready(function() {
 	$('body').on('click', function(e) {
 		if( !$(e.target).is('.nav__link, .nav__link-sub') ) {
 			$('.nav__link, .nav__link-sub, .nav__list-sub').filter('nav .active').removeClass('active');
-			console.log('НЕ попал на ссылку');
 		}
-		console.log(e.target);
 	});
 
 	// --------------catalog accordion---------------------
@@ -41,12 +39,12 @@ $( document ).ready(function() {
 	// --------------nav mobile---------------------
 
 	$('.header__btn-menu').on('click', function() {
-		$('.site-wrap, .nav-mobile-wrap, .nav-mobile-btn').addClass('active');
+		$('.site-wrap, .nav-mobile-wrap, .nav-mobile-btn, .header__btn-menu .toggle-btn, .nav-mobile-btn .toggle-btn').addClass('active');
 
 	});
 
-	$('.nav-mobile-btn ').on('click', function() {
-		$('.site-wrap, .nav-mobile-wrap, .nav-mobile-btn').removeClass('active');
+	$('.nav-mobile-btn').on('click', function() {
+		$('.site-wrap, .nav-mobile-wrap, .nav-mobile-btn, .header__btn-menu .toggle-btn,  .nav-mobile-btn .toggle-btn').removeClass('active');
 	});
 
 	$('span.nav-mobile__text').on('click', function() {

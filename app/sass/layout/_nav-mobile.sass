@@ -11,7 +11,10 @@
 .nav-mobile-wrap.active 
   transform: translateX(0px)
 
-.nav-mobile-btn 
+.nav-mobile-btn
+  display: flex
+  justify-content: center
+  align-items: center 
   position: absolute
   right: -52px
   top: 0
@@ -23,9 +26,14 @@
   outline: none
   opacity: 0
   transition: .5s
+  +media-xs 
+    top: 10px
+    width: 40px
+    height: 40px
 .nav-mobile-btn.active 
   opacity: 1
-
+ 
+ 
 .site-wrap  
   transition: .5s
 .site-wrap.active
