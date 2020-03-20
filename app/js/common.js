@@ -38,14 +38,23 @@ $( document ).ready(function() {
 
 	// --------------nav mobile---------------------
 
-	$('.header__btn-menu').on('click', function() {
+	/* $('.header__btn-menu').on('click', function() {
 		$('.site-wrap, .nav-mobile-wrap, .nav-mobile-btn, .header__btn-menu .toggle-btn, .nav-mobile-btn .toggle-btn').addClass('active');
 
 	});
 
 	$('.nav-mobile-btn').on('click', function() {
 		$('.site-wrap, .nav-mobile-wrap, .nav-mobile-btn, .header__btn-menu .toggle-btn,  .nav-mobile-btn .toggle-btn').removeClass('active');
+	}); */
+
+	$('.nav-mobile-btn').add( $('.header__btn-menu') ).on('click', function() {
+		$('.nav-mobile-wrap, .site-wrap, .header, .nav-mobile-btn, .nav-mobile-btn .toggle-btn, .header__btn-menu .toggle-btn').toggleClass('active');
+		$('body').toggleClass('locked');
 	});
+
+
+// --------------nav mobile-arrows---------------------
+
 
 	$('span.nav-mobile__text').on('click', function() {
 		$(this).toggleClass('active');

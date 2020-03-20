@@ -1,11 +1,15 @@
 .header 
   padding: 10px 0
-  // +media-sm 
-  //   position: fixed
-  //   top: 0
-  //   left: 0
-  //   width: 100%
-  //   background-color: #fff
+  transition: .5s
+  +media-sm 
+    position: fixed
+    z-index: 100
+    top: 0
+    left: 0
+    width: 100%
+    background-color: #fff
+.header.active
+  transform: translateX(300px)
 
 .header__row 
   display: flex
