@@ -39,24 +39,22 @@
   display: block
   position: relative
   padding-right: 15px
+  color: #7b7b7b
   &--main 
     font-size: 15px
-  &::after 
-    content: ''
-    position: absolute
-    top: 50%
-    right: 0
-    width: 8px
-    height: 8px
-    margin-top: -7px
-    border-radius: 3px
-    transform: rotate(45deg)
-    border-top: 3px solid #7b7b7b
-    border-right: 3px solid #7b7b7b
-    transition: .2s
-.catalog__item-text.active 
+span.catalog__item-text::after 
+  content: ''
+  position: absolute
+  top: 50%
+  right: 0
+  width: 8px
+  height: 8px
+  margin-top: -7px
+  border-radius: 3px
+  transform: rotate(45deg)
+  border-top: 3px solid #7b7b7b
+  border-right: 3px solid #7b7b7b
+  transition: .2s
+span.catalog__item-text.active 
   &::after 
     transform: rotate(135deg)
-
-.catalog__link 
-  color: #7b7b7b

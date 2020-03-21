@@ -51,7 +51,8 @@
 // --------------------------Submenu---------------------------
 
 .nav__list-sub 
-  display: none
+  // display: 
+  transform: scaleY(0)
   position: absolute
   top: 75px
   list-style: none
@@ -59,6 +60,7 @@
   margin: 0
   border-top: 5px solid #ffb953
   background-color: #7b7b7b 
+  transition: .25s
   &::before 
     content: ''
     position: absolute
@@ -70,7 +72,8 @@
     border-width: 0 35px 24px 35px
     border-color: transparent transparent #ffb953 transparent
   &.active 
-    display: block
+    // display: block
+    transform: scaleY(1)
 
 .nav__item-sub 
   position: relative
@@ -78,19 +81,48 @@
   border-bottom: 1px solid #fff
 
 .nav__link-sub 
+  position: relative
   display: block
   padding: 11px 12px
-  padding-right: 20px
+  padding-right: 30px
   font-size: 14px 
   color: #fff
+.nav__link-arrow
+  position: absolute
+  top: 50%
+  right: 15px
+  margin-top: -7px
+  width: 13px
+  height: 13px
+  &::before,
+  &::after 
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 100%
+    transform: translate(-50%, -50%)
+    height: 3px
+    border-radius: 2px
+    background-color: #fff
+  &::after 
+    transform: translate(-50%, -50%) rotate(90deg)
 
 .nav__link-sub:hover,
 .nav__link-sub.active 
   background-color: #ffb953
+
+.nav__link-sub.active .nav__link-arrow::after 
+  display: none
   
 .nav__list-sub li>.nav__list-sub 
   left: 100%
   top: 20px
+
++media-lg
+  .nav__list-sub li>.nav__list-sub.nav__list-sub--left
+    right: 100% 
+    left: auto
 
 
 
