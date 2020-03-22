@@ -1,0 +1,100 @@
+.model__row
+  position: relative
+  display: flex
+  +media-md 
+    flex-wrap: wrap
+    padding-bottom: 30px
+    padding-top: 100px
+
+.model__col-left 
+  padding: 0px 35px
+  +media-md 
+    width: 100%
+
+.model__col-right
+  +media-md 
+    width: 100%
+
+.model__name 
+  padding: 40px 0px 30px
+  font-size: 28px
+  color: #000
+  +media-md 
+    position: absolute
+    top: 0
+    width: 100%
+    text-align: center
+
+.model__btn 
+  padding: 7px 40px
+  color: #fff
+  border: none
+  background: linear-gradient(to top,#FFB953,#FDD69D)
+  cursor: pointer
+  transition: .2s
+  &:hover 
+    background: linear-gradient(to top,#494949,#9e9e9e)
+
+.model__img 
+  +media-md 
+    text-align: center
+
+.model__img-model 
+  +media-md 
+    text-align: center
+    padding-bottom: 20px
+  span 
+    display: block
+    color: #7b7b7b
+
+.model__description 
+  text-align: justify
+  padding-right: 10px
+
+.model__btn 
+  position: absolute
+  left: 0
+  bottom: 0
+
+.model-about-wrap 
+  margin-top: 20px
+
+.model-about__headers 
+  display: flex
+  +media-xs 
+    display: block
+
+.model-about__head 
+  width: 100%
+  padding: 5px
+  border: 1px solid #aaa
+  border-radius: 10px 10px 0 0
+  margin-right: -5px
+  background: #949494
+  color: #fff
+  text-align: center
+  cursor: pointer
+  transition: .3s
+  &:last-child 
+    margin-right: 0
+.model-about__head.active 
+  background-color: #FFB953
+  border-color: #fff
+
+.model-about__text-wrap 
+  padding: 10px
+  border: 1px solid #aaa
+
+.model-about__text 
+  display: none
+  transition: .5s
+  a 
+    color: #7b7b7b
+    &:hover
+      color: #FFB953
+  ul 
+    padding-left: 20px
+    margin: 0
+.model-about__text.active
+  display: block
+ 

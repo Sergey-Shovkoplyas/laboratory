@@ -55,6 +55,23 @@ $( document ).ready(function() {
 		$(this).next('.nav-mobile__list').slideToggle();
 	});
 
+
+// --------------model about---------------------
+
+	$('.model-about__head').on('click', function() {
+		if ( !$(this).hasClass('active') ) {
+			let order = $(this).attr('data-order');
+
+			$('.model-about__head').not(this).removeClass('active');
+			$(this).addClass('active');
+
+			$('.model-about__text').removeClass('active');
+			$('.model-about__text-wrap').find(`[data-order='${order}']`).addClass('active')
+		}
+		
+	});
+
+
 	
 
 
