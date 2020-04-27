@@ -14,7 +14,7 @@ $( document ).ready(function() {
 
 	$('.nav__link-sub').on('click', function(e) {
 		let $subMenu = $(this).next('.nav__list-sub');
-		$('.nav__link, .nav__link-sub, .nav__list-sub').not($subMenu).filter('nav .nav__list-sub.active .active').removeClass('active'); 
+		$('.nav__link, .nav__link-sub, .nav__list-sub').not($subMenu).filter('nav .nav__list-sub.active .active').not(this).removeClass('active'); 
 		if ($subMenu.length) {
 			e.preventDefault();
 			$(this).toggleClass('active');
