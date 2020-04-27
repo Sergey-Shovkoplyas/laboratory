@@ -23,7 +23,7 @@ $( document ).ready(function() {
 	});
 
 	$(document).on('click', function(e) {
-		if( !$(e.target).is('.nav__link, .nav__link-sub') ) {
+		if( !$(e.target).is('.nav__link, .nav__link-sub') && !$(e.target).is('.nav__link-arrow') ) {
 			$('.nav__link, .nav__link-sub, .nav__list-sub').filter('nav .active').removeClass('active');
 		}
 		
