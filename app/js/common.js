@@ -9,7 +9,7 @@ $( document ).ready(function() {
 			e.preventDefault();
 			$(this).toggleClass('active');
 			$subMenu.toggleClass('active');
-		} 
+		}  
 	});
 
 	$('.nav__link-sub').on('click', function(e) {
@@ -66,7 +66,8 @@ $( document ).ready(function() {
 			$(this).addClass('active');
 
 			$('.model-about__text').removeClass('active');
-			$('.model-about__text-wrap').find(`[data-order='${order}']`).addClass('active')
+			// $('.model-about__text-wrap').find(`[data-order='${order}']`).addClass('active');
+			$('.model-about__text-wrap').find('[data-order='+order+']').addClass('active');
 		}
 		
 	});
